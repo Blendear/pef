@@ -6,28 +6,29 @@ import { colors } from "@/styles/emotion-css/colors";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { useTranslation } from "@/hooks/useTranslation";
 import { LanguageFlagChooser } from "@/features/translation/components/LanguageFlagChooser";
+import { ReactTyped } from "react-typed";
 
 const navbarCss = {
   container: css({
-    padding: "2rem",
+    padding: "2rem 7rem",
     display: "grid",
-    gridTemplateColumns: "max-content 1fr max-content",
+    gridTemplateColumns: "1fr 3fr 1fr",
     gap: "5rem",
     background: `linear-gradient(rgba(${colors.secondaryLight}, 1), rgba(${colors.secondaryLight}, 0.75)), url("/images/other/placeholder-city.jpg")`,
     color: `rgb(${colors.primaryLight})`,
   }),
 
   logo: css({
-    margin: "0 5rem",
+    // margin: "0 5rem",
     width: "150px",
     height: "150px",
   }),
 
   header: css({
-    justifySelf: "end",
+    alignSelf: "center",
     // maxWidth: "40rem",
-    textAlign: "end",
-    fontSize: variables.fontSize.subheading,
+    textAlign: "center",
+    fontSize: variables.fontSize.heading,
     fontWeight: "normal",
     wordWrap: "break-word",
   }),
@@ -41,7 +42,15 @@ const Navbar = () => {
         wrapperCss={navbarCss.logo}
         src={"/images/brand/PEF-logo-with-bg-and-title.png"}
       />
-      <h1 css={navbarCss.header}>{t.header}</h1>
+      {/* <h1 css={navbarCss.header}>{t.slogan}</h1> */}
+      <ReactTyped
+        css={navbarCss.header}
+        strings={t.slogans}
+        typeSpeed={30}
+        backDelay={3000}
+        backSpeed={30}
+        loop
+      />
       <LanguageFlagChooser />
     </nav>
   );
