@@ -16,6 +16,7 @@ export const en = {
   home: {
     headers: {
       whoAreWe: "What We Focus On",
+      meetOutLeader: "Meet Our Leader",
     },
     infoChunks: {
       first: {
@@ -38,6 +39,9 @@ export const en = {
         content:
           "Our investments in rehabilitation focus on modern therapeutic centers that support the recovery of individuals after injuries, illnesses, and surgeries. We aim to create spaces that provide comprehensive care and high-quality rehabilitation services.",
       },
+    },
+    leader: {
+      role: "Member of the Board of Directors",
     },
   },
 };

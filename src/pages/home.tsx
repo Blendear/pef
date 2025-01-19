@@ -11,6 +11,7 @@ import { CiWheat } from "react-icons/ci";
 import { MdOutlineMedicalServices } from "react-icons/md";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
 import { MdOutlineGppGood } from "react-icons/md";
+import ImageWithWrapper from "@/components/ImageWithWrapper";
 
 const icons = {
   first: <MdOutlineRealEstateAgent />,
@@ -21,16 +22,17 @@ const icons = {
 
 const homeCss = {
   container: css({
-    padding: `${variables.gap.lg} ${variables.gap.lg} `,
+    padding: `${variables.gap.lg} 0 `,
     display: "grid",
     gap: variables.gap.lg,
   }),
 
-  whoAreWe: css({
+  header: css({
     textAlign: "center",
   }),
 
   infoChunks: css({
+    margin: "0 0 2rem 0",
     display: "flex",
     gap: "2rem 6rem",
     flexWrap: "wrap",
@@ -38,13 +40,17 @@ const homeCss = {
 
     "& > div": {
       width: "100%",
-      flex: "0 0 25rem",
+      flex: "0 0 40rem",
       display: "grid",
       gap: variables.gap.md,
       gridAutoRows: "max-content",
 
-      "& > *": {
+      "& > h3": {
         textAlign: "center",
+      },
+
+      "& > p": {
+        textAlign: "justify",
       },
 
       "& > svg": {
@@ -54,6 +60,63 @@ const homeCss = {
       },
     },
   }),
+
+  imageUnderInfoChunks: css({
+    width: "100%",
+    height: "300px",
+  }),
+
+  leaderContainer: css({
+    margin: "1rem 0 0 0",
+    display: "grid",
+    justifyContent: "center",
+    position: "relative",
+  }),
+
+  leaderImage: css({
+    margin: "0 0 3rem 0",
+    width: "200px",
+    height: "200px",
+    justifySelf: "center",
+
+    "& > span": {
+      borderRadius: "50%",
+    },
+  }),
+
+  leaderBgShapeOne: css({
+    position: "absolute",
+    justifySelf: "center",
+    transform: "translate(15%, -15%)",
+    width: "175px",
+    height: "175px",
+    borderRadius: "50%",
+    backgroundColor: `rgb(${colors.tertiaryLight}, 0.85)`,
+    zIndex: -1,
+  }),
+
+  leaderBgShapeTwo: css({
+    position: "absolute",
+    justifySelf: "center",
+    transform: "translate(-30%, 15%)",
+    width: "150px",
+    height: "150px",
+    borderRadius: "50%",
+    backgroundColor: `rgb(${colors.tertiaryLight}, 0.25)`,
+    zIndex: -1,
+  }),
+
+  leaderName: css({
+    margin: "0 0 2rem 0",
+    textAlign: "center",
+    fontSize: variables.fontSize.heading,
+  }),
+
+  leaderRole: css({
+    margin: "0 0 2rem 0",
+    textAlign: "center",
+    fontSize: variables.fontSize.subheading,
+  }),
 };
 
 const Home = () => {
@@ -61,10 +124,10 @@ const Home = () => {
 
   return (
     <div css={homeCss.container}>
-      <h1 css={homeCss.whoAreWe}>{t.headers.whoAreWe}</h1>
+      <h1 css={homeCss.header}>{t.headers.whoAreWe}</h1>
 
       <div css={homeCss.infoChunks}>
-        {["first", "second", "third", "fourth"].map((dataVisualizer, index) => {
+        {["first", "second"].map((dataVisualizer, index) => {
           return (
             <div key={index}>
               {icons[dataVisualizer]}
@@ -73,6 +136,43 @@ const Home = () => {
             </div>
           );
         })}
+      </div>
+
+      <ImageWithWrapper
+        wrapperCss={homeCss.imageUnderInfoChunks}
+        src={"/images/other/city.jpg"}
+      />
+
+      <div css={homeCss.infoChunks}>
+        {["third", "fourth"].map((dataVisualizer, index) => {
+          return (
+            <div key={index}>
+              {icons[dataVisualizer]}
+              <h3>{t.infoChunks[dataVisualizer].header}</h3>
+              <p>{t.infoChunks[dataVisualizer].content}</p>
+            </div>
+          );
+        })}
+      </div>
+
+      <ImageWithWrapper
+        wrapperCss={homeCss.imageUnderInfoChunks}
+        src={"/images/other/farm-sunny.jpg"}
+      />
+
+      <h2 css={homeCss.header}>{t.headers.meetOutLeader}</h2>
+
+      <div css={homeCss.leaderContainer}>
+        <div css={homeCss.leaderBgShapeOne}></div>
+        <div css={homeCss.leaderBgShapeTwo}></div>
+        <ImageWithWrapper
+          wrapperCss={homeCss.leaderImage}
+          src={"/images/other/leader-profile.png"}
+        />
+        <div>
+          <p css={homeCss.leaderName}>Roland Cibis</p>
+          <p css={homeCss.leaderRole}>{t.leader.role}</p>
+        </div>
       </div>
     </div>
   );

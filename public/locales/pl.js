@@ -16,6 +16,7 @@ export const pl = {
   home: {
     headers: {
       whoAreWe: "Na czym się skupiamy",
+      meetOutLeader: "Poznaj naszego lidera",
     },
     infoChunks: {
       first: {
@@ -38,6 +39,9 @@ export const pl = {
         content:
           "Nasze inwestycje w rehabilitację koncentrują się na nowoczesnych ośrodkach terapeutycznych, które wspierają powrót do zdrowia osób po kontuzjach, chorobach oraz operacjach. Zależy nam na tworzeniu przestrzeni, które zapewniają kompleksową opiekę oraz wysokiej jakości usługi rehabilitacyjne.",
       },
+    },
+    leader: {
+      role: "Członek Rady Dyrektorów",
     },
   },
 };

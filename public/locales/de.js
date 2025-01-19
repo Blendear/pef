@@ -16,6 +16,7 @@ export const de = {
   home: {
     headers: {
       whoAreWe: "Worauf wir uns konzentrieren",
+      meetOutLeader: "Treffen Sie unseren Leiter",
     },
     infoChunks: {
       first: {
@@ -38,6 +39,9 @@ export const de = {
         content:
           "Unsere Investitionen in Rehabilitation konzentrieren sich auf moderne therapeutische Zentren, die die Genesung von Personen nach Verletzungen, Krankheiten und Operationen unterstützen. Wir möchten Räume schaffen, die umfassende Pflege und hochwertige Rehabilitationsdienste bieten.",
       },
+    },
+    leader: {
+      role: "Mitglied des Verwaltungsrats",
     },
   },
 };

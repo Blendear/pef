@@ -26,11 +26,14 @@ const navbarCss = {
 
   header: css({
     alignSelf: "center",
-    // maxWidth: "40rem",
     textAlign: "center",
     fontSize: variables.fontSize.heading,
     fontWeight: "normal",
     wordWrap: "break-word",
+
+    "& .typed-cursor": {
+      color: `rgb(${colors.tertiaryLight})`,
+    },
   }),
 };
 const Navbar = () => {
