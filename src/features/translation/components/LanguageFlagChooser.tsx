@@ -10,13 +10,12 @@ import ImageWithWrapper from "@/components/ImageWithWrapper";
 const languageFlagChooserCss = {
   container: css({
     position: "relative",
-    padding: "0 80px 0 0",
-    justifySelf: "end",
+    justifySelf: "center",
     width: "max-content",
     display: "grid",
 
-    "@media (orientation: landscape)": {
-      padding: " 0 30px 0 0",
+    "@media (max-width: 420px)": {
+      gridColumn: "3",
     },
   }),
 

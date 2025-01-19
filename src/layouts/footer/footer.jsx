@@ -61,7 +61,7 @@ const footerCss = {
         },
       },
 
-      "& > div:not(:first-of-type):not(:nth-of-type(2))": {
+      "& > div:not(:first-of-type)": {
         "@media (max-width:922px)": {
           margin: "40px 0 0 0",
         },
@@ -71,7 +71,7 @@ const footerCss = {
 
   logo: css({
     width: "175px",
-    height: "145.5px", // Since it's not a square image. -> 175 / 1.202 = 145.5
+    height: "175px", // Since it's not a square image. -> 175 / 1.202 = 145.5
   }),
 
   socialsSvgs: css({
@@ -105,7 +105,7 @@ const Footer = () => {
         <div>
           <ImageWithWrapper
             wrapperCss={footerCss.logo}
-            src={"/images/brand/PEF-logo-title-transparent.png"}
+            src={"/images/brand/PEF-logo-title-transparent-fully.png"}
           />
         </div>
 

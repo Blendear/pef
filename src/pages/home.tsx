@@ -28,11 +28,13 @@ const homeCss = {
   }),
 
   header: css({
+    padding: "0 3rem",
     textAlign: "center",
+    fontSize: variables.fontSize.subheading,
   }),
 
   infoChunks: css({
-    margin: "0 0 2rem 0",
+    margin: `0 0 2rem 0`,
     display: "flex",
     gap: "2rem 6rem",
     flexWrap: "wrap",
@@ -45,12 +47,23 @@ const homeCss = {
       gap: variables.gap.md,
       gridAutoRows: "max-content",
 
+      "@media (max-width: 800px)": {
+        flex: "0 0 35rem",
+      },
+      "@media (max-width: 450px)": {
+        flex: "0 0 25rem",
+      },
+
       "& > h3": {
         textAlign: "center",
       },
 
       "& > p": {
         textAlign: "justify",
+
+        "@media (max-width: 800px)": {
+          textAlign: "center",
+        },
       },
 
       "& > svg": {
@@ -113,6 +126,7 @@ const homeCss = {
   }),
 
   leaderRole: css({
+    padding: "0 3rem",
     margin: "0 0 2rem 0",
     textAlign: "center",
     fontSize: variables.fontSize.subheading,

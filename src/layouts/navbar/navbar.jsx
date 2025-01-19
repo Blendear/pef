@@ -10,26 +10,47 @@ import { ReactTyped } from "react-typed";
 
 const navbarCss = {
   container: css({
-    padding: "2rem 7rem",
+    padding: "2rem 4rem",
+    width: "100%",
     display: "grid",
-    gridTemplateColumns: "1fr 3fr 1fr",
+    gridTemplateColumns: "150px 3fr 150px",
     gap: "5rem",
     backgroundColor: `rgb(${colors.secondaryLight})`,
     background: `linear-gradient(rgba(${colors.secondaryLight}, 1), rgba(${colors.secondaryLight}, 0.75)), url("/images/other/fasade-1.jpg")`,
     color: `rgb(${colors.primaryLight})`,
+
+    "@media (max-width: 750px)": {
+      padding: "2rem 3rem",
+      gridTemplateColumns: "125px 3fr 125px",
+      gap: "2rem",
+    },
+
+    "@media (max-width: 600px)": {
+      padding: "2rem 1.75rem",
+      gridTemplateColumns: "75px 3fr 75px",
+    },
   }),
 
   logo: css({
-    width: "175px",
-    height: "145px", // Since it's not a square image. -> 175 / 1.202 = 145.5
+    width: "100%",
+    aspectRatio: "1/1",
   }),
 
   header: css({
     alignSelf: "center",
     textAlign: "center",
-    fontSize: variables.fontSize.heading,
+    fontSize: variables.fontSize.subheading,
     fontWeight: "normal",
     wordWrap: "break-word",
+
+    "@media (max-width: 600px)": {
+      fontSize: variables.fontSize.regular,
+    },
+
+    "@media (max-width: 420px)": {
+      gridRow: "2",
+      gridColumn: "1 / -1",
+    },
 
     "& .typed-cursor": {
       color: `rgb(${colors.tertiaryLight})`,
@@ -43,7 +64,7 @@ const Navbar = () => {
     <nav css={navbarCss.container}>
       <ImageWithWrapper
         wrapperCss={navbarCss.logo}
-        src={"/images/brand/PEF-logo-title-transparent.png"}
+        src={"/images/brand/PEF-logo-title-transparent-fully.png"}
       />
       {/* <h1 css={navbarCss.header}>{t.slogan}</h1> */}
       <ReactTyped
