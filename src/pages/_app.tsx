@@ -29,7 +29,7 @@ const globalCss = {
 
     body: {
       margin: "0",
-      background: colors.whiteLight,
+      background: `rgb(${colors.whiteLight})`,
       // fontFamily is available thanks to the "font importer" code inside "_document.tsx"
       fontFamily: "'Montserrat', sans-serif",
       fontStyle: "normal",

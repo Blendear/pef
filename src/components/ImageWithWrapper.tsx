@@ -3,29 +3,18 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 import { ImageWithWrapperProps } from "@/types";
 
-const ImageWithWrapper = ({
-  width,
-  height,
-  aspectRatio,
-  src,
-  alt,
-  wrapperCss,
-}: ImageWithWrapperProps) => {
+const ImageWithWrapper = ({ src, alt, wrapperCss }: ImageWithWrapperProps) => {
   return (
     <div
       css={wrapperCss}
       style={
-        height
+        !wrapperCss
           ? {
               position: "relative",
-              width: `${width || "4rem"}`,
-              height: `${height || "4rem"}`,
+              width: "4rem",
+              height: "4rem",
             }
-          : {
-              position: "relative",
-              width: `${width || "4rem"}`,
-              aspectRatio: `${aspectRatio || "1/1"}`,
-            }
+          : { position: "relative" }
       }
     >
       <Image

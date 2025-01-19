@@ -1,8 +1,12 @@
 export const pl = {
+  navbar: {
+    header: "Strategiczne inwestycje na długoterminowy rozwój",
+  },
+
   footer: {
     addressCountry: "Szwajcaria",
     emailLabel: "Email",
-    uidLabel: "NIP",
+    nipLabel: "NIP",
   },
 
   home: {
