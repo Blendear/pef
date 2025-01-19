@@ -1,6 +1,6 @@
 import { AppDataUniversalForAllUsersType } from "@/types";
 
 export const appDataUniversalForAllUsers: AppDataUniversalForAllUsersType = {
-  // languageChosen: "en",
+  languageChosen: "en",
   // mealIndexMArkedAsFavouriteForDinner: 0,
 };

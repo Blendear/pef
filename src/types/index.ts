@@ -9,6 +9,6 @@ export type ImageWithWrapperProps = {
 export type AppDataOfCurrentUser = {};
 
 export type AppDataUniversalForAllUsersType = {
-  languageChosen: "pl" | "eng" | "de";
+  languageChosen: "pl" | "en" | "de";
   // mealIndexMArkedAsFavouriteForDinner: number;
 };
