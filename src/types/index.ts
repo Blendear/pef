@@ -1,7 +1,5 @@
 export type RGBColorString = string | `rgb(${string})`;
 
-export type OneTwoThreeFourWordComponentNameProps = {};
-
 export type ImageWithWrapperProps = {
   width?: string;
   height?: string;
@@ -9,4 +7,11 @@ export type ImageWithWrapperProps = {
   src: string;
   alt?: string;
   wrapperCss?: {};
+};
+
+export type AppDataOfCurrentUser = {};
+
+export type AppDataUniversalForAllUsersType = {
+  // languageChosen: "pl" | "eng";
+  // mealIndexMArkedAsFavouriteForDinner: number;
 };

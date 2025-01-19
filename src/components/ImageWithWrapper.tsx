@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import Image from "next/image";
-import { ImageWithWrapperProps } from "..";
+import { ImageWithWrapperProps } from "@/types";
 
 const ImageWithWrapper = ({
   width,

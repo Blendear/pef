@@ -13,7 +13,7 @@ export const useForceRerender = (
   //   const [forceRerender, setForceRerender] = useState(false);
 
   useEffect(() => {
-    // TODO: Figure out why the hell does it trigger a components rerender on "useForceRerender" use,
+    // One day : Figure out why the hell does it trigger a components rerender on "useForceRerender" use,
     // even though the "setForceRerender" is uncommented. It's not supposed to trigger a rerender.
     // Yet it does. As if the fact that a "reduxState" change triggers a rerender of the component.
     //

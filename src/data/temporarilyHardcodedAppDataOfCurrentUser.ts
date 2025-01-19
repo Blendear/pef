@@ -1,4 +1,4 @@
-export const hardcodedAppDataOfCurrentUser = {
+export const temporarilyHardcodedAppDataOfCurrentUser = {
   fighters: [
     {
       name: "alana",

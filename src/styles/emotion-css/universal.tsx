@@ -40,7 +40,7 @@ export const universalCss = {
     border: `0.1rem solid rgb(${colors.whiteLight}, 0.5)`,
     borderRadius: variables.borderRadius.md,
     boxShadow: `inset 0 0 1rem 0.5rem rgba(${colors.whiteLight},0.15)`,
-    backgroundColor: `rgb(${colors.tertiaryLight})`,
+    // backgroundColor: `rgb(${colors.tertiaryLight})`,
   }),
 
   wrapperWithCenteredSvg: (wrapperSize: string, svgSize: string) =>

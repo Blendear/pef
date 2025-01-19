@@ -1,19 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Translation / Internalisation
+  i18n: {
+    locales: ["en", "de", "pl"],
+    defaultLocale: "pl",
+  },
+
   reactStrictMode: true,
   swcMinify: true,
   async redirects() {
     return [
       {
         source: "/",
-        destination: "/todo-landing-page-to-rename",
+        destination: "/home",
         permanent: true,
       },
     ];
   },
 
   images: {
-    domains: ["https://todo-template-app-name.app/", "https://localhost:3000"],
+    domains: ["https://pef.app/", "https://localhost:3000"],
     //   website of this project, so that images are loaded on the live website too
     remotePatterns: [
       {
