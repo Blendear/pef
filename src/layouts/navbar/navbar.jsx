@@ -48,6 +48,7 @@ const navbarCss = {
     },
 
     "@media (max-width: 420px)": {
+      height: "35px",
       gridRow: "2",
       gridColumn: "1 / -1",
     },

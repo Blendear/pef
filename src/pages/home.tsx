@@ -22,7 +22,7 @@ const icons = {
 
 const homeCss = {
   container: css({
-    padding: `${variables.gap.lg} 0 `,
+    padding: `0 0 ${variables.gap.lg} 0 `,
     display: "grid",
     gap: variables.gap.lg,
   }),
@@ -138,6 +138,11 @@ const Home = () => {
 
   return (
     <div css={homeCss.container}>
+      <ImageWithWrapper
+        wrapperCss={homeCss.imageUnderInfoChunks}
+        src={"/images/other/city.jpg"}
+      />
+
       <h1 css={homeCss.header}>{t.headers.whoAreWe}</h1>
 
       <div css={homeCss.infoChunks}>
@@ -154,7 +159,7 @@ const Home = () => {
 
       <ImageWithWrapper
         wrapperCss={homeCss.imageUnderInfoChunks}
-        src={"/images/other/city.jpg"}
+        src={"/images/other/farm-sunny.jpg"}
       />
 
       <div css={homeCss.infoChunks}>
@@ -168,11 +173,6 @@ const Home = () => {
           );
         })}
       </div>
-
-      <ImageWithWrapper
-        wrapperCss={homeCss.imageUnderInfoChunks}
-        src={"/images/other/farm-sunny.jpg"}
-      />
 
       <h2 css={homeCss.header}>{t.headers.meetOutLeader}</h2>
 
