@@ -12,8 +12,8 @@ const footerCss = {
     padding: "2rem 0",
     display: "grid",
     justifyItems: "center",
-    // backgroundColor: `rgb(${colors.secondaryLight}, 0.75)`,
-    background: `linear-gradient(rgba(${colors.secondaryLight}, 1), rgba(${colors.secondaryLight}, 0.75)), url("/images/other/placeholder-city.jpg")`,
+    backgroundColor: `rgb(${colors.secondaryLight})`,
+    background: `linear-gradient(rgba(${colors.secondaryLight}, 1), rgba(${colors.secondaryLight}, 0.75)), url("/images/other/fasade-3.jpg")`,
     color: `rgb(${colors.primaryLight})`,
 
     "& > div": {
@@ -71,7 +71,7 @@ const footerCss = {
 
   logo: css({
     width: "175px",
-    height: "175px",
+    height: "145.5px", // Since it's not a square image. -> 175 / 1.202 = 145.5
   }),
 
   socialsSvgs: css({
@@ -105,7 +105,7 @@ const Footer = () => {
         <div>
           <ImageWithWrapper
             wrapperCss={footerCss.logo}
-            src={"/images/brand/PEF-logo-with-bg-and-title.png"}
+            src={"/images/brand/PEF-logo-title-transparent.png"}
           />
         </div>
 

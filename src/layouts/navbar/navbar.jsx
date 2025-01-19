@@ -14,14 +14,14 @@ const navbarCss = {
     display: "grid",
     gridTemplateColumns: "1fr 3fr 1fr",
     gap: "5rem",
-    background: `linear-gradient(rgba(${colors.secondaryLight}, 1), rgba(${colors.secondaryLight}, 0.75)), url("/images/other/placeholder-city.jpg")`,
+    backgroundColor: `rgb(${colors.secondaryLight})`,
+    background: `linear-gradient(rgba(${colors.secondaryLight}, 1), rgba(${colors.secondaryLight}, 0.75)), url("/images/other/fasade-1.jpg")`,
     color: `rgb(${colors.primaryLight})`,
   }),
 
   logo: css({
-    // margin: "0 5rem",
-    width: "150px",
-    height: "150px",
+    width: "175px",
+    height: "145px", // Since it's not a square image. -> 175 / 1.202 = 145.5
   }),
 
   header: css({
@@ -43,7 +43,7 @@ const Navbar = () => {
     <nav css={navbarCss.container}>
       <ImageWithWrapper
         wrapperCss={navbarCss.logo}
-        src={"/images/brand/PEF-logo-with-bg-and-title.png"}
+        src={"/images/brand/PEF-logo-title-transparent.png"}
       />
       {/* <h1 css={navbarCss.header}>{t.slogan}</h1> */}
       <ReactTyped
