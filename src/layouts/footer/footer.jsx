@@ -7,7 +7,7 @@ import { FaLinkedin } from "react-icons/fa";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { useTranslation } from "@/hooks/useTranslation";
 
-export const footerCss = {
+const footerCss = {
   container: css({
     padding: "2rem 0",
     display: "grid",

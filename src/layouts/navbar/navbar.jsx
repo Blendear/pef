@@ -4,24 +4,30 @@ import { variables } from "@/styles/emotion-css/variables";
 import { universalCss } from "@/styles/emotion-css/universal";
 import { colors } from "@/styles/emotion-css/colors";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
-import { footerCss } from "@/layouts/footer/footer";
 import { useTranslation } from "@/hooks/useTranslation";
+import { LanguageFlagChooser } from "@/features/translation/components/LanguageFlagChooser";
 
 const navbarCss = {
   container: css({
+    padding: "2rem",
     display: "grid",
-    gridAutoFlow: "column",
-    gridAutoColumns: "max-content",
+    gridTemplateColumns: "max-content 1fr max-content",
     gap: "5rem",
     background: `linear-gradient(rgba(${colors.secondaryLight}, 1), rgba(${colors.secondaryLight}, 0.75)), url("/images/other/placeholder-city.jpg")`,
     color: `rgb(${colors.primaryLight})`,
+  }),
+
+  logo: css({
+    margin: "0 5rem",
+    width: "150px",
+    height: "150px",
   }),
 
   header: css({
     justifySelf: "end",
     // maxWidth: "40rem",
     textAlign: "end",
-    fontSize: variables.fontSize.header,
+    fontSize: variables.fontSize.subheading,
     fontWeight: "normal",
     wordWrap: "break-word",
   }),
@@ -32,10 +38,11 @@ const Navbar = () => {
   return (
     <nav css={navbarCss.container}>
       <ImageWithWrapper
-        wrapperCss={footerCss.logo}
+        wrapperCss={navbarCss.logo}
         src={"/images/brand/PEF-logo-with-bg-and-title.png"}
       />
       <h1 css={navbarCss.header}>{t.header}</h1>
+      <LanguageFlagChooser />
     </nav>
   );
 };

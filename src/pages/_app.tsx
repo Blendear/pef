@@ -34,6 +34,7 @@ const globalCss = {
       fontFamily: "'Montserrat', sans-serif",
       fontStyle: "normal",
       fontSize: variables.fontSize.regular,
+      color: `rgb(${colors.quaternaryLight})`,
     },
 
     html: {

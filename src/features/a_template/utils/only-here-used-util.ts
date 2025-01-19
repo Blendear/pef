@@ -1,2 +1,0 @@
-// for example "formatDateInAWayuThatOnlyCreatingCharacterNeeds"
-export {};

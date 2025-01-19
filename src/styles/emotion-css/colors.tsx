@@ -1,7 +1,8 @@
 export const colors = {
   primaryLight: "255, 255, 255",
-  secondaryLight: "17, 25, 40", //"23, 24, 28",
+  secondaryLight: "17, 25, 40",
   tertiaryLight: "158, 0, 57",
+  quaternaryLight: "23, 24, 28",
 
   whiteLight: "255, 255, 255",
 
